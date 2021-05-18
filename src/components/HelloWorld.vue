@@ -368,6 +368,7 @@ export default {
     },
     hotLeave() {
       this.activeHot = "";
+      console.log("23");
     },
   },
   mounted() {
