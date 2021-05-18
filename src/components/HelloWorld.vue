@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!-- 首页 -->
 <template>
   <div class="fe-page home-page">
@@ -41,7 +43,9 @@
         <div style="height: 785px; background-color: #ffffff">
           <div class="fe-page-container">
             <div class="container-title flex-column-between">
-              <p :id="containerElement1Id.title">{{ containerElement1.title }}</p>
+              <p :id="containerElement1Id.title">
+                {{ containerElement1.title }}
+              </p>
               <p :id="containerElement1Id.title" class="title-describe">
                 {{ containerElement1.describe }}
               </p>
@@ -87,10 +91,15 @@
                         ￥{{ item }}.
                         <span class="fe-font-md">00</span>
                       </span>
-                      <span :id="hotProductId[index].unit" style="color: #455a74">{{ item.unit }}</span>
+                      <span :id="hotProductId[index].unit" style="color: #455a74">
+                        {{ item.unit }}
+                      </span>
                     </p>
                     <p>
-                      优惠：<span :id="hotProductId[index]" style="color: #455a74">{{ item }}</span>
+                      优惠：
+                      <span :id="hotProductId[index]" style="color: #455a74">
+                        {{ item }}
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -107,7 +116,9 @@
         <div style="height: 670px; background-color: #f9f9f9">
           <div class="fe-page-container">
             <div class="container-title flex-column-between">
-              <p :id="containerElement2Id.title">{{ containerElement2.title }}</p>
+              <p :id="containerElement2Id.title">
+                {{ containerElement2.title }}
+              </p>
               <p :id="containerElement2Id.describe" class="title-describe">
                 {{ containerElement2.describe }}
               </p>
@@ -172,8 +183,10 @@
                   </ul>
                   <div class="end-container-group fe-flex-between">
                     <div>
-                      <span :id="recommendationId[active][index]" style="color: #ff956f">￥{{ item }}.00 </span
-                      ><span :id="recommendationId[active][index].unit">{{ item.unit }}</span>
+                      <span :id="recommendationId[active][index]" style="color: #ff956f">￥{{ item }}.00</span>
+                      <span :id="recommendationId[active][index].unit">
+                        {{ item.unit }}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -185,7 +198,9 @@
         <div style="height: 868px; background-color: #ffffff">
           <div class="fe-page-container">
             <div class="container-title flex-column-between">
-              <p :id="containerElement3Id.title">{{ containerElement3.title }}</p>
+              <p :id="containerElement3Id.title">
+                {{ containerElement3.title }}
+              </p>
               <p :id="containerElement3Id.describe" class="title-describe">
                 {{ containerElement3.describe }}
               </p>
@@ -230,7 +245,9 @@
         <div style="height: 852px; background-color: #f9f9f9">
           <div class="fe-page-container">
             <div class="container-title flex-column-between">
-              <p :id="containerElement4Id.title">{{ containerElement4.title }}</p>
+              <p :id="containerElement4Id.title">
+                {{ containerElement4.title }}
+              </p>
               <p :id="containerElement4Id.describe" class="title-describe">
                 {{ containerElement4.describe }}
               </p>
@@ -256,7 +273,8 @@
           </div>
           <div class="w-100 fe-flex-center" style="margin-top: 80px">
             <div @click="jump(moreInformation.url)" class="more-product fe-flex-center">
-              {{ moreInformation.title }}<i class="el-icon-back" />
+              {{ moreInformation.title }}
+              <i class="el-icon-back" />
             </div>
           </div>
         </div>
@@ -286,37 +304,37 @@ export default {
       schemeMenuId: [],
       informationId: [],
       active: 0,
-      activeHover: "",
-      activeHot: "",
+      activeHover: '',
+      activeHot: '',
       menuActive: 0,
 
       containerElement1: {
-        title: "热门产品",
-        describe: "为您提供专网自服务建设的热门产品。",
+        title: '热门产品',
+        describe: '为您提供专网自服务建设的热门产品。',
       },
       containerElement2: {
-        title: "专网组合产品推荐",
-        describe: "针对不同的业务需求，为您提供合适的组合产品。",
+        title: '专网组合产品推荐',
+        describe: '针对不同的业务需求，为您提供合适的组合产品。',
       },
       containerElement3: {
-        title: "精选方案",
-        describe: "为您精选包含最专业的、15大行业的5G专网解决方案。",
+        title: '精选方案',
+        describe: '为您精选包含最专业的、15大行业的5G专网解决方案。',
       },
       containerElement4: {
-        title: "行业资讯",
-        describe: "带给您最新的深度行业资讯。",
+        title: '行业资讯',
+        describe: '带给您最新的深度行业资讯。',
       },
       containerElement1Id: {},
       containerElement2Id: {},
       containerElement3Id: {},
       containerElement4Id: {},
       moreInformation: {
-        title: "更多资讯",
-        url: "",
+        title: '更多资讯',
+        url: '',
       },
       moreProducts: {
-        title: "更多产品",
-        url: "",
+        title: '更多产品',
+        url: '',
       },
     };
   },
@@ -346,7 +364,7 @@ export default {
     },
     // banner高度自适应
     autoHeightS() {
-      this.$refs.banner.style.height = this.$refs.banner.clientWidth * 0.3125 + "px";
+      this.$refs.banner.style.height = this.$refs.banner.clientWidth * 0.3125 + 'px';
       // console.log("宽",this.$refs.banner.clientWidth)
     },
     // Although come back to normal life,we still admire those who see the daylight in fearless years.
@@ -361,14 +379,14 @@ export default {
       this.activeHover = index;
     },
     recommendationLeave() {
-      this.activeHover = "";
+      this.activeHover = '';
     },
     hotOver(index) {
       this.activeHot = index;
     },
     hotLeave() {
-      this.activeHot = "";
-      console.log("23");
+      this.activeHot = '';
+      console.log('23');
     },
   },
   mounted() {
