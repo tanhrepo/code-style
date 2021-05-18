@@ -1,5 +1,3 @@
-<!-- @format -->
-
 <!-- 首页 -->
 <template>
   <div class="fe-page home-page">
